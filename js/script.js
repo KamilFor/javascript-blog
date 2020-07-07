@@ -38,8 +38,8 @@ const titleClickHandler = function(event) {
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list';
-optArticleAuthorSelector = '.post-author .list';
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.post-author .list';
 
 function generateTitleLinks(customSelector = '') {
   /* remove contents of titleList */
