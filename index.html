@@ -215,19 +215,32 @@
                 <aside class="sidebar">
                     <h2 class="section-title">Tags</h2>
                     <ul class="list tags">
-                        <li><a href="#">cat</a> <span>(6)</span></li>
-                        <li><a href="#">cactus</a> <span>(5)</span></li>
-                        <li><a href="#">scissors</a> <span>(4)</span></li>
-                        <li><a href="#">reviews</a> <span>(4)</span></li>
-                        <li><a href="#">news</a> <span>(6)</span></li>
                     </ul>
-                    <h2 class="section-title">Authors</h2>
+                    <h2 class="section-title">Author</h2>
+                    <ul class="list authors">
+                    </ul>
                 </aside>
             </main>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script type='text/javascript' rel='js/handlebars-v4.0.5.js'></script>
+    <script type='text/javascript' rel='js/name-table.js'></script>
+    <script id="template-article-link" type="text/x-handlebars-template">
+        <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+      </script>
+    <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+        {{#each tags}}
+        <li>{{ tag  }} {{ count }}</li>
+        {{/each}}
+      </script>
+    <script id="template-tag-author-link" type="text/x-handlebars-template">
+        {{#each authorTags}}
+        <li>{{ authorTag }}</li>
+        {{/each}}
+      </script>
+    <script src="js/script.js"> </script>
 </body>
 
 </html>
